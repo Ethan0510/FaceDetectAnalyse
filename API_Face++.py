@@ -52,7 +52,7 @@ Using Face++ get the similarity between two faces.
     cv2.destroyAllWindows()
 
 
-def update_img(file_dir, oneface=True):
+def upload_img(file_dir, oneface=True):
 	"""
 	update faces to face++ and return faceID
 	"""
@@ -79,8 +79,8 @@ def compare(faceID1, faceID2):
 
 
 if __name__ == "__main__":
-    faceID1 = update_img('image/lena.jpg')
-    faceID2 = update_img('image/17-1m.bmp')
+    faceID1 = upload_img('image/lena.jpg')
+    faceID2 = upload_img('image/17-1m.bmp')
     if faceID2 and faceID1:
         compare_json = compare(faceID1, faceID2)
         print(compare_json)
